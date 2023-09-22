@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "abdo ",
+        "username": "abdo rabea",
+        "email": "abdo@gmail.com",
+        "phone": "01030931139",
+        "website": "abdo.com",
+        "extension": "jpeg"
+    },
+    {
+        "id": 2,
+        "name": "ahmed",
+        "username": "ahmed rabea",
+        "email": "ahmed@g.com",
+        "phone": "01023456782",
+        "website": "ahmed.com",
+        "extension": "jpg"
+    },
+    {
+        "id": 3,
+        "name": "alaa",
+        "username": "alaa ahmed",
+        "email": "alaa@g.com",
+        "phone": "01234567891",
+        "website": "a.com"
+    }
+]
