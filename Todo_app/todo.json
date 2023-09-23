@@ -1,0 +1,11 @@
+{
+    "do tasks": {
+        "completed": false
+    },
+    "finish app": {
+        "completed": true
+    },
+    "test": {
+        "completed": false
+    }
+}
