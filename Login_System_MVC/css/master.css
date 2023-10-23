@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.navbar {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.login .forms {
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login .forms {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* .login .forms .login-signup {
+    background-color: #eee;
+} */
+.login .forms input {
+    /* display: block; */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.login .forms input[type="submit"] {
+    width: fit-content;
+    /* background-color: #4095ef;
+    color: white; */
+}

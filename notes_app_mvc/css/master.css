@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+.contianer {
+    width: 80%;
+    margin: auto;
+}
+
+.create-note {
+    margin-bottom: 20px;
+}
+.create-note form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 10px;
+}
+.create-note form input[type="text"],
+.create-note form textarea,
+.create-note form button {
+    padding: 10px;
+}
+
+div .notes {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 10px;
+}
+div .notes .note {
+    background-color: #f9c200;
+    position: relative;
+    padding: 10px;
+}
+div .notes .note a {
+    display: inline-block;
+    font-weight: bold;
+}
+div .notes .note small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+div .notes .note button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+div .notes .note button:hover {
+    cursor: pointer;
+}
+div .notes .note button:focus {
+    color: white;
+}
