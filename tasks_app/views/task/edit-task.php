@@ -26,29 +26,61 @@ $task = $taskContr->getTask($taskid);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <title>edit task</title>
 </head>
 
 <body>
-  <nav>
-    <ul style="list-style: none; padding: 0">
-      <li><a href="../user/user.php">User</a></li>
-      <li><a href="../../includes/logout.inc.php">Logout</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../user/user.php">User</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link"><?= $username ?></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../includes/logout.inc.php">Logout</a>
+        </li>
+      </ul>
+    </div>
   </nav>
-  <h1><?= $username ?></h1>
-  <form action="../../includes/edit-task.inc.php" method="post">
-    <input type="text" name="task_title" placeholder="task title" value="<?= $task['task_title'] ?>">
-    <input type="text" name="description" placeholder="description" value="<?= $task['description'] ?>">
-    <input type="date" name="due_date" value="<?= $task['due_date'] ?>">
-    <select name="status_id">
-      <option value="1" <?= ($task['status_id'] === 1) ? 'selected' : ''; ?>>to do</option>
-      <option value="2" <?= ($task['status_id'] === 2) ? 'selected' : ''; ?>>in progress</option>
-      <option value="3" <?= ($task['status_id'] === 3) ? 'selected' : ''; ?>>completed</option>
-    </select>
-    <input type="hidden" name="task_id" value="<?= $taskid ?>">
-    <button type="submit">edit task</button>
-  </form>
+
+  <div class="container mt-3">
+    <h1>Edit Task</h1>
+    <form action="../../includes/edit-task.inc.php" method="post" class="mt-3">
+      <div class="mb-3">
+        <label for="task_title" class="form-label">Task Title</label>
+        <input type="text" name="task_title" class="form-control" placeholder="Task Title" value="<?= $task['task_title'] ?>" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" name="description" class="form-control" placeholder="Description" value="<?= $task['description'] ?>" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="due_date" class="form-label">Due Date</label>
+        <input type="date" name="due_date" class="form-control" value="<?= $task['due_date'] ?>" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="status_id" class="form-label">Status</label>
+        <select name="status_id" class="form-select" required>
+          <option value="1" <?= ($task['status_id'] === 1) ? 'selected' : ''; ?>>To Do</option>
+          <option value="2" <?= ($task['status_id'] === 2) ? 'selected' : ''; ?>>In Progress</option>
+          <option value="3" <?= ($task['status_id'] === 3) ? 'selected' : ''; ?>>Completed</option>
+        </select>
+      </div>
+
+      <input type="hidden" name="task_id" value="<?= $taskid ?>">
+      <button type="submit" class="btn btn-primary">Edit Task</button>
+    </form>
+  </div>
+
 
 </body>
 
